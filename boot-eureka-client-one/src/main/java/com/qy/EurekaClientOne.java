@@ -13,9 +13,9 @@ import org.springframework.web.client.RestTemplate;
  */
 @EnableFeignClients
 @SpringBootApplication
-public class Main {
+public class EurekaClientOne {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(EurekaClientOne.class, args);
     }
     @Bean
     @LoadBalanced

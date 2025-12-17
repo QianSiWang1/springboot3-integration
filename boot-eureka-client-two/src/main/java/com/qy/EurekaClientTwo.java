@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Date 2025/12/17
  */
 @SpringBootApplication
-public class Main {
+public class EurekaClientTwo {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(EurekaClientTwo.class, args);
     }
 }

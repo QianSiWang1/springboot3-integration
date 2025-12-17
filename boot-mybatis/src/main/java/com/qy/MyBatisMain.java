@@ -12,8 +12,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @MapperScan(basePackages = "com.qy.mapper")
 @SpringBootApplication
 @EnableAsync
-public class Main {
+public class MyBatisMain {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(MyBatisMain.class, args);
     }
 }
