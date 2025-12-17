@@ -1,0 +1,29 @@
+server:
+  port: 8003
+  servlet:
+    context-path: /gateway
+spring:
+  application:
+    name: boot-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: boot-eureka-client-one
+          uri: lb://boot-eureka-client-one
+          predicates:
+            - Path=/boot-eureka-client-one/**
+        - id: boot-eureka-client-two
+          uri: lb://boot-eureka-client-two
+          predicates:
+            - Path=/boot-eureka-client-two/**
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
